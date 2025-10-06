@@ -1,63 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C55E59FE-A3B5-4192-9B3F-0790A83829EB}</ProjectGuid>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Arkitektum.GIS.Lib.SerializeUtil</RootNamespace>
-    <AssemblyName>Arkitektum.GIS.Lib.SerializeUtil</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+
+	<!--Assembly info START-->
+	<AssemblyTitle>$(AssemblyName)</AssemblyTitle>
+	<Description>XML Serialization util for serializing objects to and from objects, files and strings.</Description>
+	<Configuration />
+	<Company>Statens Kartverk</Company>
+	<Product>$(AssemblyName)</Product>
+	<Copyright>
+		Copyright © 2015 Arkitektum AS, 2025 Statens kartverk
+	</Copyright>
+	<ComVisible>false</ComVisible>
+	<AssemblyGuid>7d277290-9510-4d3b-9c02-45ef7afcea5d</AssemblyGuid>
+	<AssemblyVersion>1.4.0</AssemblyVersion>
+	<!--Assembly info END-->
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+  <PropertyGroup>
+	<Title>Serializing Utility</Title>
+	<Authors>Statens kartverk</Authors>
+	<PackageId>$(AssemblyName)</PackageId>
+	<PackageVersion>1.4.0-alpha1</PackageVersion>
+	<PackageDescription />
+	<PackageTags>.NET .XML</PackageTags>
+	<PackageLicenseExpression>BSD-2-Clause</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	<PackageReleaseNotes>Converted to netstandard2.0</PackageReleaseNotes>
+	<RepositoryType>git</RepositoryType>
+	<PackageProjectUrl>https://github.com/kartverket/GIS.Lib.SerializeUtil.git</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/kartverket/GIS.Lib.SerializeUtil.git</RepositoryUrl>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xml" />
+	<None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerializeUtil.cs" />
-    <Compile Include="StringWriterWithEncoding.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".gitignore" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Arkitektum.GIS.Lib.SerializeUtil.nuspec">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LICENSE" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
